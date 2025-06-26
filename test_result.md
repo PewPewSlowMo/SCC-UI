@@ -106,112 +106,112 @@
 
 ## frontend:
   - task: "Установка зависимостей для графиков и иконок"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "package.json"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
-      - working: "NA"
+      - working: true
         agent: "main"
-        comment: "Планируется установка Chart.js/Recharts, react-router-dom, react-icons"
+        comment: "Установлены recharts, react-icons, lucide-react успешно"
 
   - task: "Создание системы тем (светлая/темная)"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "src/contexts/ThemeContext.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
-      - working: "NA"
+      - working: true
         agent: "main"
-        comment: "Нужно создать ThemeProvider с переключением тем"
+        comment: "ThemeProvider создан с переключением тем и localStorage"
 
   - task: "Компонент Sidebar с навигацией"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "src/components/Sidebar.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
-      - working: "NA"
+      - working: true
         agent: "main"
-        comment: "Боковая панель с меню и переключателем темы"
+        comment: "Sidebar с навигацией и переключателем темы реализован"
 
   - task: "Dashboard - главная страница"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "src/pages/Dashboard.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
-      - working: "NA"
+      - working: true
         agent: "main"
-        comment: "Карточки метрик, графики, таблица операторов"
+        comment: "Dashboard с карточками метрик, графиками и таблицей готов"
 
   - task: "Страница отчетов по операторам"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "src/pages/Operators.js"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
-      - working: "NA"
+      - working: true
         agent: "main"
-        comment: "Фильтры, таблица с детальной статистикой операторов"
+        comment: "Страница операторов с фильтрами и детальной статистикой готова"
 
   - task: "Страница отчетов по очередям"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "src/pages/Queues.js"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
-      - working: "NA"
+      - working: true
         agent: "main"
-        comment: "Статистика по очередям звонков"
+        comment: "Страница очередей с графиками и статистикой готова"
 
   - task: "Страница пропущенных звонков"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "src/pages/MissedCalls.js"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
-      - working: "NA"
+      - working: true
         agent: "main"
-        comment: "Список пропущенных звонков с фильтрами"
+        comment: "Страница пропущенных звонков с фильтрами и экспортом готова"
 
   - task: "Страница аналитики"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "src/pages/Analytics.js"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
-      - working: "NA"
+      - working: true
         agent: "main"
-        comment: "Дополнительные графики и аналитика"
+        comment: "Продвинутая аналитика с множественными графиками готова"
 
   - task: "Настройки"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "src/pages/Settings.js"
     stuck_count: 0
     priority: "low"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
-      - working: "NA"
+      - working: true
         agent: "main"
-        comment: "Настройки профиля и системы"
+        comment: "Многовкладочная страница настроек с профилем, пользователями, интеграциями готова"
 
 ## backend:
   - task: "Базовый FastAPI сервер"
