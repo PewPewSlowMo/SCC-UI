@@ -101,3 +101,147 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+## user_problem_statement: "Создание современной системы аналитики для колл-центра с красивым frontend на основе 3-го варианта дизайна (темная/светлая тема)"
+
+## frontend:
+  - task: "Установка зависимостей для графиков и иконок"
+    implemented: false
+    working: "NA"
+    file: "package.json"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Планируется установка Chart.js/Recharts, react-router-dom, react-icons"
+
+  - task: "Создание системы тем (светлая/темная)"
+    implemented: false
+    working: "NA"
+    file: "src/contexts/ThemeContext.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Нужно создать ThemeProvider с переключением тем"
+
+  - task: "Компонент Sidebar с навигацией"
+    implemented: false
+    working: "NA"
+    file: "src/components/Sidebar.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Боковая панель с меню и переключателем темы"
+
+  - task: "Dashboard - главная страница"
+    implemented: false
+    working: "NA"
+    file: "src/pages/Dashboard.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Карточки метрик, графики, таблица операторов"
+
+  - task: "Страница отчетов по операторам"
+    implemented: false
+    working: "NA"
+    file: "src/pages/Operators.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Фильтры, таблица с детальной статистикой операторов"
+
+  - task: "Страница отчетов по очередям"
+    implemented: false
+    working: "NA"
+    file: "src/pages/Queues.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Статистика по очередям звонков"
+
+  - task: "Страница пропущенных звонков"
+    implemented: false
+    working: "NA"
+    file: "src/pages/MissedCalls.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Список пропущенных звонков с фильтрами"
+
+  - task: "Страница аналитики"
+    implemented: false
+    working: "NA"
+    file: "src/pages/Analytics.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Дополнительные графики и аналитика"
+
+  - task: "Настройки"
+    implemented: false
+    working: "NA"
+    file: "src/pages/Settings.js"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Настройки профиля и системы"
+
+## backend:
+  - task: "Базовый FastAPI сервер"
+    implemented: true
+    working: true
+    file: "server.py"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Базовый сервер уже работает, возможно потребуется расширение API"
+
+## metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 0
+  run_ui: false
+
+## test_plan:
+  current_focus:
+    - "Установка зависимостей для графиков и иконок"
+    - "Создание системы тем (светлая/темная)"
+    - "Компонент Sidebar с навигацией"
+    - "Dashboard - главная страница"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+## agent_communication:
+  - agent: "main"
+    message: "Начинаю реализацию фронтенда на основе 3-го варианта дизайна (темная тема) с возможностью переключения на светлую тему. План: установка зависимостей, создание системы тем, компонентов и всех страниц."
