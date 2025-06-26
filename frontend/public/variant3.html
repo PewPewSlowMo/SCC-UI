@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вариант 3: Тёмная тема - Smart Колл Центр</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .dark-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        .card-dark {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .metric-card {
+            transition: all 0.3s ease;
+        }
+        .metric-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+        .neon-border {
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white font-sans">
+    <!-- Sidebar -->
+    <aside class="h-screen w-64 bg-slate-800 border-r border-slate-700 flex flex-col shadow-2xl fixed left-0 top-0 z-20">
+        <div class="flex items-center gap-3 px-6 py-6 border-b border-slate-700">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center glow-effect">
+                <i class="fas fa-chart-line text-xl text-white"></i>
+            </div>
+            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Smart Колл</span>
+        </div>
+        
+        <nav class="flex-1 mt-6">
+            <a href="#" class="flex items-center gap-3 px-6 py-3 text-white bg-gradient-to-r from-blue-600 to-purple-600 border-r-4 border-blue-400 glow-effect mx-2 rounded-lg">
+                <i class="fas fa-tachometer-alt w-5"></i>
+                <span>Дашборд</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-6 py-3 text-slate-300 hover:text-white hover:bg-slate-700 transition-all mx-2 rounded-lg mt-1">
+                <i class="fas fa-users w-5"></i>
+                <span>Отчеты по операторам</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-6 py-3 text-slate-300 hover:text-white hover:bg-slate-700 transition-all mx-2 rounded-lg mt-1">
+                <i class="fas fa-list w-5"></i>
+                <span>Отчеты по очередям</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-6 py-3 text-slate-300 hover:text-white hover:bg-slate-700 transition-all mx-2 rounded-lg mt-1">
+                <i class="fas fa-phone-slash w-5"></i>
+                <span>Пропущенные звонки</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-6 py-3 text-slate-300 hover:text-white hover:bg-slate-700 transition-all mx-2 rounded-lg mt-1">
+                <i class="fas fa-chart-bar w-5"></i>
+                <span>Аналитика</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-6 py-3 text-slate-300 hover:text-white hover:bg-slate-700 transition-all mx-2 rounded-lg mt-1">
+                <i class="fas fa-cog w-5"></i>
+                <span>Настройки</span>
+            </a>
+        </nav>
+        
+        <div class="mt-auto px-6 py-6 border-t border-slate-700">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-lg font-bold">А</div>
+                <div>
+                    <div class="font-semibold">Администратор</div>
+                    <div class="text-sm text-slate-400">admin@callcenter.com</div>
+                </div>
+            </div>
+            <button class="w-full bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition-colors border border-slate-600">
+                <i class="fas fa-sign-out-alt mr-2"></i>Выйти
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="ml-64 p-8 dark-gradient min-h-screen">
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">Smart Колл Центр</h1>
+            <p class="text-slate-300">Добро пожаловать! Обзор ключевых метрик колл-центра</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex gap-4 mb-8">
+            <select class="px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white">
+                <option>Сегодня</option>
+                <option>Вчера</option>
+                <option>Эта неделя</option>
+                <option>Этот месяц</option>
+            </select>
+            <select class="px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white">
+                <option>Все группы</option>
+                <option>Группа поддержки</option>
+                <option>Группа продаж</option>
+            </select>
+            <button class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all glow-effect">
+                <i class="fas fa-sync mr-2"></i>Обновить
+            </button>
+        </div>
+
+        <!-- Metrics Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="metric-card card-dark p-6 rounded-xl neon-border">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-slate-400 text-sm">Всего звонков</p>
+                        <p class="text-3xl font-bold text-white">82</p>
+                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center glow-effect">
+                        <i class="fas fa-phone text-white"></i>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <span class="text-emerald-400 text-sm">↗ +12%</span>
+                    <span class="text-slate-400 text-sm ml-2">от вчера</span>
+                </div>
+            </div>
+
+            <div class="metric-card card-dark p-6 rounded-xl neon-border">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-slate-400 text-sm">Отвеченные звонки</p>
+                        <p class="text-3xl font-bold text-white">111</p>
+                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center" style="box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);">
+                        <i class="fas fa-phone-alt text-white"></i>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <span class="text-emerald-400 text-sm">↗ +8%</span>
+                    <span class="text-slate-400 text-sm ml-2">от вчера</span>
+                </div>
+            </div>
+
+            <div class="metric-card card-dark p-6 rounded-xl neon-border">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-slate-400 text-sm">Пропущенные звонки</p>
+                        <p class="text-3xl font-bold text-white">9</p>
+                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center" style="box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);">
+                        <i class="fas fa-phone-slash text-white"></i>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <span class="text-red-400 text-sm">↘ -3%</span>
+                    <span class="text-slate-400 text-sm ml-2">от вчера</span>
+                </div>
+            </div>
+
+            <div class="metric-card card-dark p-6 rounded-xl neon-border">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-slate-400 text-sm">Уровень обслуживания</p>
+                        <p class="text-3xl font-bold text-white">76%</p>
+                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center" style="box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);">
+                        <i class="fas fa-chart-line text-white"></i>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <span class="text-emerald-400 text-sm">↗ +2%</span>
+                    <span class="text-slate-400 text-sm ml-2">от вчера</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div class="card-dark p-6 rounded-xl neon-border">
+                <h3 class="text-lg font-semibold text-white mb-4">Распределение звонков</h3>
+                <div class="h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg flex items-center justify-center border border-slate-600">
+                    <div class="text-center">
+                        <i class="fas fa-chart-bar text-4xl text-blue-400 mb-2"></i>
+                        <p class="text-slate-300">График распределения звонков по часам</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-dark p-6 rounded-xl neon-border">
+                <h3 class="text-lg font-semibold text-white mb-4">Активность операторов</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-3 bg-emerald-900/30 rounded-lg border border-emerald-500/30">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                            <span class="font-medium text-white">Петр Иванов</span>
+                        </div>
+                        <span class="text-sm text-emerald-400 font-medium bg-emerald-900/50 px-2 py-1 rounded">Онлайн</span>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-red-900/30 rounded-lg border border-red-500/30">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
+                            <span class="font-medium text-white">Мария Сидорова</span>
+                        </div>
+                        <span class="text-sm text-red-400 font-medium bg-red-900/50 px-2 py-1 rounded">Занят</span>
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-emerald-900/30 rounded-lg border border-emerald-500/30">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                            <span class="font-medium text-white">Алексей Смирнов</span>
+                        </div>
+                        <span class="text-sm text-emerald-400 font-medium bg-emerald-900/50 px-2 py-1 rounded">Онлайн</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="card-dark rounded-xl neon-border">
+            <div class="p-6 border-b border-slate-600">
+                <h3 class="text-lg font-semibold text-white">Детальная статистика операторов</h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-slate-800/50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">Имя оператора</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">Группа</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">Всего звонков</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">Отвечено</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-slate-300 uppercase tracking-wider">Эффективность</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-600">
+                        <tr class="hover:bg-slate-800/50">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                                        <span class="text-white font-medium text-sm">МС</span>
+                                    </div>
+                                    <span class="font-medium text-white">Мария Сидорова</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">Группа поддержки</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">640</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">640</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="bg-emerald-500/20 text-emerald-400 text-xs font-medium px-2.5 py-0.5 rounded-full border border-emerald-500/30">100%</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/50">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3">
+                                        <span class="text-white font-medium text-sm">АС</span>
+                                    </div>
+                                    <span class="font-medium text-white">Алексей Смирнов</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-300">Группа продаж</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">594</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">594</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="bg-emerald-500/20 text-emerald-400 text-xs font-medium px-2.5 py-0.5 rounded-full border border-emerald-500/30">100%</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
