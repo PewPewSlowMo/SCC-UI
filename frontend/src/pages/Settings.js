@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
-import { FaUser, FaUsers, FaCog, FaDatabase, FaBell, FaShield } from 'react-icons/fa';
+import { FaUser, FaUsers, FaCog, FaDatabase, FaBell, FaShieldAlt } from 'react-icons/fa';
 
 const Settings = () => {
   const { isDark } = useTheme();
