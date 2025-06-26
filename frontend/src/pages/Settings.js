@@ -43,7 +43,7 @@ const Settings = () => {
     { id: 'system', label: 'Система', icon: FaCog },
     { id: 'integrations', label: 'Интеграции', icon: FaDatabase },
     { id: 'notifications', label: 'Уведомления', icon: FaBell },
-    { id: 'security', label: 'Безопасность', icon: FaShield }
+    { id: 'security', label: 'Безопасность', icon: FaShieldAlt }
   ];
 
   const users = [
